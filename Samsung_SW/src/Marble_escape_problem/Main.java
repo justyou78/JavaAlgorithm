@@ -1,4 +1,4 @@
-package marble_escape_problem;
+package Marble_escape_problem;
 
 public class Main {
 	public static void main(String[] args) {
