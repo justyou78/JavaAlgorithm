@@ -57,12 +57,7 @@ public class Main {
 		}
 		
 		System.out.println(hm.size());
-		System.out.println(ht.size());
-		
-		
-		
-		
-		
+		System.out.println(ht.size());	
 		
 	}
 }
