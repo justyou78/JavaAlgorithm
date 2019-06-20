@@ -10,18 +10,20 @@ class CodeReview {
 		List<Integer> list = new ArrayList<>();
 		List<Integer> answerList = new ArrayList<>();
 
-//		for (int i = 0; i < progresses.length; i++) {
-//			if ((100 - progresses[i]) % speeds[i] == 0)
-//				days = (100 - progresses[i]) / speeds[i];
-//			else
-//				days = (100 - progresses[i]) / speeds[i] + 1;
-//			list.add(days);
-//		}
-		list.add(5);
-		list.add(3);
-		list.add(7);
-		list.add(4);
-		list.add(8);
+		for (int i = 0; i < progresses.length; i++) {
+			if ((100 - progresses[i]) % speeds[i] == 0)
+				days = (100 - progresses[i]) / speeds[i];
+			else
+				days = (100 - progresses[i]) / speeds[i] + 1;
+			list.add(days);
+		}
+		
+//  	Testcase
+//		list.add(5);
+//		list.add(3);
+//		list.add(7);
+//		list.add(4);
+//		list.add(8);
 		
 
 		int save = 0;

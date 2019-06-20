@@ -17,6 +17,8 @@ public class Main {
 
 		s.push("A");
 		s.push("B");
+		System.out.println(s.toString());
+		
 		s.push("C");
 
 		q.offer("A");
