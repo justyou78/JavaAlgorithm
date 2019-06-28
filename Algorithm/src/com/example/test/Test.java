@@ -2,33 +2,30 @@ package com.example.test;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Stack;
 
 public class Test {
 	public static void main(String[] args) {
-		int i[] = {3,2,1,5,2};
+		example e= new example();
+		e.t();
 		
-		PriorityQueue<Integer> pq= new PriorityQueue<Integer>(i.length);
-		LinkedList<Integer> ll = new LinkedList<Integer>();
-		LinkedList<Integer> ll2 = new LinkedList<Integer>();
-		LinkedList<Integer> ll3 = new LinkedList<Integer>();
 		
-		for (int j = 0; j < i.length; j++) {
-			pq.offer(i[j]);
-			ll.add(i[j]);
-			ll2.push(i[j]);
-			ll3.offer(i[j]);
-			
-			
+	}
+	
+}
+
+class example{
+	public void t() {
+		int number[] = {1,2,3};	
+		s(number);
+		
+		for (int i = 0; i < number.length; i++) {
+			System.out.println(number[i]);
 		}
 		
-		
-		System.out.println(pq.toString());
-		//System.out.println(ll.toString());
-		//System.out.println(ll2.toString());
-		//System.out.println(ll3.toString());
-		
-		
-		   
+	}
+	public void s(int[] number) {
+		number[2] = 7;
 	}
 }
 
