@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+
 //완전이진트리형태야
 //최대힙과 최소힙이 있어.
 //보통 배열로 만들지. 이유 ? ->데이터 삽입할 때 마지막 끝에 데이터를 삽입하고
@@ -61,7 +62,7 @@ public class Main {
 	}
 }
 
-
+//integer형을 이용한 비교
 class Prisoner implements Comparable<Prisoner>{
 	String name;
 	int sentence ; // 형량
@@ -88,4 +89,23 @@ class Prisoner implements Comparable<Prisoner>{
 	}
 	
 }
+//String형을 이용한 비교
+class TT implements Comparable<TT>{
+
+	String name;
+	
+	public TT(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public int compareTo(TT o) {
+		return name.compareTo(o.name);
+	}
+	
+}
+
+
+
 

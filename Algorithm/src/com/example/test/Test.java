@@ -1,33 +1,39 @@
 package com.example.test;
 
-import java.util.LinkedList;
 import java.util.PriorityQueue;
-import java.util.Stack;
 
 public class Test {
 	public static void main(String[] args) {
-		example e= new example();
-		e.t();
 		
+	       PriorityQueue<TT> pq= new PriorityQueue<TT>();
+	       pq.add(new TT("TEST"));
+	       pq.add(new TT("MONSTER"));
+	       
+	       System.out.println(pq.poll().name);
+	       
 		
+	}
+	
+	
+	
+}
+
+class TT implements Comparable<TT>{
+
+	String name;
+	
+	public TT(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public int compareTo(TT o) {
+		return name.compareTo(o.name);
 	}
 	
 }
 
-class example{
-	public void t() {
-		int number[] = {1,2,3};	
-		s(number);
-		
-		for (int i = 0; i < number.length; i++) {
-			System.out.println(number[i]);
-		}
-		
-	}
-	public void s(int[] number) {
-		number[2] = 7;
-	}
-}
 
 
 
