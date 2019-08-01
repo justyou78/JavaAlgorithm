@@ -33,9 +33,8 @@ public class Main {
 		ll.addFirst("a");
 		ll.add("b");
 
-		ll.offer("b");
-		ll.pop();
-		ll.poll();
+		ll.offer("c");
+		ll.push("e");
 
 		System.out.println(ll.toString());
 
