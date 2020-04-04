@@ -41,7 +41,7 @@ public class Permutation {
 		arr[j] =  temp;
 	}
 	//내용물 찍기.
-	public static void print(int[] arr, int k) {
+	public static void print( int[] arr, int k) {
 		for (int i = 0; i < k; i++) {
 			if(i == k-1) {
 				System.out.println(arr[i]);

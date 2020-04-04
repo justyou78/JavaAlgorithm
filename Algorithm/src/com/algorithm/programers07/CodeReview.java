@@ -15,7 +15,7 @@ class Truck {
     }
 }
  
-//for문 돌아가고 while문도 돌아가는데 왜 내 코드의 성능이 더 떨어지는지 모르겠어....
+
 class OtherSolution {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int time = 0;

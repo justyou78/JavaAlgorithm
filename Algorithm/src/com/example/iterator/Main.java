@@ -14,7 +14,7 @@ public class Main {
 		ll.add(2);
 		ll.add(3);
 		ll.add(4);
-
+		
 		//ll을 iterator에 결합!
 		Iterator it = ll.iterator();
 

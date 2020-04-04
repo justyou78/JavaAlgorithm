@@ -1,42 +1,52 @@
 package com.example.test;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class Test {
-	public static void main(String[] args) {
-		String st = "1234";
-		int j = 1;
-		int i = 0;
-		char a = st.charAt(i);
-		System.out.println(a);
-    	st =st.replace(st.charAt(i), st.charAt(j));
-    	
-    	st =st.replace(st.charAt(j), a);
-    	System.out.println(st);
+    public static void main(String[] args) {
+    	String barcode = "1110154001001";
+    	String[] barcodes = barcode.split("");
+    	int odd = 0;
+    	int even = 0;
+    	for (int i = 0; i < barcodes.length; i++) {
+			if(i % 2 == 0) {
+				odd += Integer.parseInt(barcodes[i]);
+				
+			}
+			else {
+				even += Integer.parseInt(barcodes[i]);
+			}
+		}
+    	System.out.println(odd);
+    	System.out.println(even);
 	}
 }
 
-class TT {
-	public void test() {
-		Stack<Integer> stack = new Stack<Integer>();
-		test02(stack);
-		for (int s = 0; s < stack.size(); s++) {
-			System.out.println(stack.get(s));
-		}
+
+
+class Jobs implements Comparable<Jobs>{
+	int time;
+	int job;
+	Jobs(int time, int job){
+		this.time = time;
+		this.job = job;
 	}
-
-	public void test02(Stack<Integer> st) {
-		st.add(1);
-		st.add(2);
-		st.add(3);
-		st.add(4);
-
+	@Override
+	public int compareTo(Jobs o) {
+		if(this.job> o.job) {
+			return 1;
+			
+		}
+		else if(this.job == o.job) {
+			return 0;
+			
+		}
+		else {
+			return -1;
+		}
 	}
 }

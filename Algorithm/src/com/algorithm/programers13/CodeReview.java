@@ -9,6 +9,7 @@ import java.util.Queue;
 class CodeReview {
 	 
     public int solution(int[][] jobs) {
+    	//우선순위 큐 오름차순(처리시간기준)
         Queue<Disk> queue = new PriorityQueue<>(Collections.reverseOrder((o1, o2) -> (o2.processTime - o1.processTime)));
         List<Disk> disks = new ArrayList<>();
         int totalTime = 0;
@@ -16,8 +17,10 @@ class CodeReview {
             disks.add(new Disk(jobs[i][0], jobs[i][1]));
  
         Collections.sort(disks, Collections.reverseOrder((o1, o2) -> (o2.requestTime - o1.requestTime)));
+       
         int settingTime = disks.get(0).requestTime;
         for (Disk disk : disks) {
+        	System.out.println(disk.processTime);
             disk.requestTime -= settingTime;
             totalTime += (disk.processTime + disk.requestTime);
         }

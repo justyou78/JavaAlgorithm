@@ -7,6 +7,9 @@ import java.util.Collections;
 //Comparable 사용 예시
 public class Main {
 	public static void main(String[] args) {
+		
+		//Queue<Disk> queue = new PriorityQueue<>(Collections.reverseOrder((o1, o2) -> (o2.processTime - o1.processTime)));
+		
 		ArrayList<Point> point =  new ArrayList<Point>();
 		point.add(new Point(4,2));
 		point.add(new Point(3,1));
@@ -42,7 +45,7 @@ class Point implements Comparable<Point>{
 
 
 	public int compareTo(Point o) {
-		if(this.x > o.x) {
+		if(this.x < o.x) {
 			return 1;
 		}
 		else if(this.x == o.x) {

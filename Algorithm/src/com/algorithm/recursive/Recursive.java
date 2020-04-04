@@ -15,6 +15,7 @@ public class Recursive {
 		} else {
 			System.out.println(number);
 			recursive01(number + 1);
+			System.out.println("갔다옴");
 		}
 	}
 	//팩토리얼

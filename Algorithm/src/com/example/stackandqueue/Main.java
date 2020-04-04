@@ -1,5 +1,6 @@
 package com.example.stackandqueue;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -24,6 +25,8 @@ public class Main {
 		q.offer("A");
 		q.offer("B");
 		q.offer("C");
+		
+	
 
 		System.out.println(s.toString());
 		System.out.println(q.toString());
@@ -49,6 +52,7 @@ public class Main {
 			System.out.println(q.poll());
 
 		}
+	
 
 	}
 }

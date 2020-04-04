@@ -4,10 +4,9 @@ package com.algorithm.recursive;
 public class Main {
 	public static void main(String[] args) {
 		Recursive r = new Recursive();
-		//r.recursive01(1);
+		r.recursive01(1);
 		//System.out.println(r.recursive02(5));
 		//r.recursive03(5,5);
-		String st = "hihihi";
 		
 	}
 }

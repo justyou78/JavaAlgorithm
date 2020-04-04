@@ -1,20 +1,30 @@
 package com.example.combination;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Combination {
+	//조합 : ABC가 중복없이 자리가 없이 짝을지을경우. Ex)ABC ACB BAC BCA.....
+		//nPr = n(n-1)(n-2)...(n-r+1)
+		//ABC순열은 nCr롤 가정할 때, 3C2 3*2/2*1
+		//밑의 코드는 4C1에서 4C4까지 뽑는 방법이다.\
+	  static ArrayList<Integer> al = new ArrayList<Integer>();
 	public static void main(String[] args) {
         int n = 4;
-        int[] arr = {1, 2, 3, 4};
+        int[] arr = {2, 3, 5, 1};
         boolean[] visited = new boolean[n];
  
         for(int i=1; i<=n; i++) {
-            comb(arr, visited, 0, n, i);
+            combination(arr, visited, 0, n, i);
         }
         
         System.out.println();
         
-        for(int i=1; i<=n ;i++) {
-            combination(arr, visited, 0, n, i);
-        }
+      
+        
+        
+     
+        
     }
  
     // 백트래킹 사용
@@ -51,12 +61,20 @@ public class Combination {
     }
  
     // 배열 출력
+   
     static void print(int[] arr, boolean[] visited, int n) {
-        for(int i=0; i<n; i++) {
+     
+    	for(int i=0; i<n; i++) {
             if(visited[i] == true)
-                System.out.print(arr[i] + " ");
+            {
+            	System.out.print(arr[i]);
+            
+            }
         }
-        System.out.println();
+    	System.out.println();
+   
+        
     }
+   
 
 }
